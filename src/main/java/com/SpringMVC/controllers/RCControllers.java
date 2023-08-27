@@ -1,7 +1,10 @@
 package com.SpringMVC.controllers;
 
+import org.springframework.beans.propertyeditors.StringTrimmerEditor;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.WebDataBinder;
+import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -42,4 +45,11 @@ public class RCControllers{
 		}
 		return "registerSuccess";
 	}
+	@InitBinder
+	public void initBinder(WebDataBinder dataBinder) {
+		StringTrimmerEditor editor = new StringTrimmerEditor(true);
+		dataBinder.registerCustomEditor(String.class, "yourName", editor);
+	}
 }
+
+

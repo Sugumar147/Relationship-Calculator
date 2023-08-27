@@ -1,9 +1,11 @@
 package com.SpringMVC.api;
 
 import jakarta.validation.constraints.AssertTrue;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
 public class UserInfoDTO {
+	@NotNull()
 	@Size(min=3,max=15,message = "* name should be 3 - 15 characters")
 	private String yourName;
 	@Size(min=3,max=15,message = "* name should be 3 - 15 characters")

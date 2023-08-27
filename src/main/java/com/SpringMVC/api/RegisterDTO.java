@@ -13,7 +13,7 @@ public class RegisterDTO {
 	private String[] hobby;
 	
 	
-	@Phone(message = "* Enter a valid phone number")
+	@Phone(message = "* Enter a valid number")
 	private String phone;
 	
 	public String getGender() {
