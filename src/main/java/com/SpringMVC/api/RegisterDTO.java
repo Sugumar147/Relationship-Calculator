@@ -1,17 +1,20 @@
-package com.SpringMVC.api;
+ package com.SpringMVC.api;
 
-import com.SpringMVC.communicationDTO.CommunicationDTO;
+import com.SpringMVC.validator.Phone;
 
-import jakarta.validation.constraints.AssertTrue;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 
 public class RegisterDTO {
 	@NotBlank(message = "* Cannot be blank")
-	private String name,username,password,country,gender;
+	private String name,username,password,country,gender,email;
+	
 	@Size(min=1 , max = 10 ,message = "* Atleast select one")
 	private String[] hobby;
-	private CommunicationDTO communicationDTO;
+	
+	
+	@Phone(message = "* Enter a valid phone number")
+	private String phone;
 	
 	public String getGender() {
 		return gender;
@@ -62,13 +65,21 @@ public class RegisterDTO {
 		this.hobby = hobby;
 	}
 
-	public CommunicationDTO getCommunicationDTO() {
-		return communicationDTO;
+	public String getPhone() {
+		return phone;
 	}
 
-	public void setCommunicationDTO(CommunicationDTO communicationDTO) {
-		this.communicationDTO = communicationDTO;
+	public void setPhone(String phone) {
+		this.phone = phone;
 	}
 
-	
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+
 }

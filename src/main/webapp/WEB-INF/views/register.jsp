@@ -62,7 +62,7 @@ h2 {
 			<div class="form-group">
 				<form:label path="username">Username:</form:label>
 				<form:input path="username" id="username" class="form-control" />
-				<form:errors path="name" cssClass="error"></form:errors>
+				<form:errors path="username" cssClass="error"></form:errors>
 			</div>
 
 			<div class="form-group">
@@ -121,16 +121,18 @@ h2 {
 				<form:errors path="gender" cssClass="error"></form:errors>
 			</div>
 			<div class="form-group">
-				<form:label path="communicationDTO.email">Email:</form:label>
-				<form:input path="communicationDTO.email" id="email" class="form-control" />
-				<form:errors path="communicationDTO.email" cssClass="error"></form:errors>
+				<form:label path="email">Email:</form:label>
+				<form:input path="email" id="email"
+					class="form-control" />
+				<form:errors path="email" cssClass="error"></form:errors>
 			</div>
 
 			<div class="form-group">
-				<form:label path="communicationDTO.phone">Phone Number:</form:label>
-				<form:input path="communicationDTO.phone" id="phoneNumber" class="form-control" />
-				<form:errors path="communicationDTO.phone" cssClass="error"></form:errors>
-			</div> 
+				<form:label path="phone">Phone Number:</form:label>
+				<form:input path="phone" id="phone" class="form-control" />
+				<form:errors path="phone" cssClass="error"></form:errors>
+			</div>
+
 
 			<input type="submit" value="Register" class="btn btn-primary" />
 		</form:form>
